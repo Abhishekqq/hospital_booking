@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Booking</title>
+    <link rel="stylesheet" href="web.css">
+    <script src="web.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Hospital Appointment Booking</h1>
+    </header>
+    
+    <main>
+        <section id="search">
+            <h2>Find a Hospital Based on Symptoms</h2>
+            <input type="text" id="symptomInput" placeholder="Enter your symptoms...">
+            <button id="searchButton">Search</button>
+            <ul id="hospitalList"></ul>
+        </section>
+
+        <section id="appointment">
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <label for="hospitalSelect">Select Hospital:</label>
+                <select id="hospitalSelect">
+                    <option value="City Hospital">City Hospital</option>
+                    <option value="Green Valley Hospital">Green Valley Hospital</option>
+                    <option value="Sunrise Medical Center">Sunrise Medical Center</option>
+                    <option value="Riverdale Clinic">Riverdale Clinic</option>
+                    <option value="Mountainview Hospital">Mountainview Hospital</option>
+                    <option value="Mahatma Gandhi Hospitals">Mahatma Gandhi Hospitals</option>
+                    <option value="RUHS">RUHS</option>
+                </select>
+                
+                <label for="appointmentDate">Choose Date:</label>
+                <input type="date" id="appointmentDate" required>
+                
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="map">
+            <h2>Find Nearby Hospitals</h2>
+            <button id="locationButton">Find Hospitals Near Me</button>
+            <div id="mapContainer"></div>
+        </section>
+    </main>
+</body>
+</html>
